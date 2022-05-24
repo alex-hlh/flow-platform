@@ -17,6 +17,7 @@
         <module>flow-framework</module>
         <module>flow-server</module>
         <module>flow-common</module>
+        <module>activiti</module>
     </modules>
 
     <properties>

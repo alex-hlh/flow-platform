@@ -9,10 +9,7 @@ import com.run.flow.service.ISysMenuService;
 import com.run.flow.utils.SecurityUtils;
 import com.run.flow.web.SysLoginService;
 import com.run.flow.web.SysPermissionService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,9 +36,13 @@ public class SysLoginController {
 	private SysPermissionService permissionService;
 
 	@PostMapping("/login")
-	@ApiOperation("用户登录")
+	@ApiOperation(value="用户登录方法",
+			      notes="用户登录方法<br>")
 	@ApiImplicitParams({
-			@ApiImplicitParam(name = "loginBody", value = "登录用户信息", required = true, dataType = "LoginBody", dataTypeClass = LoginBody.class),
+			@ApiImplicitParam(name = "loginBody", value = "登录用户信息",paramType="body", required = true, dataType = "LoginBody", dataTypeClass = LoginBody.class),
+	})
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "请求成功",response = String.class)
 	})
 	@ResponseBody
 	public CommonResult login(@RequestBody LoginBody loginBody) {
@@ -54,9 +55,11 @@ public class SysLoginController {
 	}
 
 	/**
-	 * 获取用户信息
-	 *
-	 * @return 用户信息
+	 * @Description: 获取所有用户信息
+	 * @Author: hlh
+	 * @Date: 2022-05-24 21:53
+	 * @Param: []
+	 * @Return: CommonResult
 	 */
 	@GetMapping("getInfo")
 	public CommonResult getInfo() {
@@ -73,9 +76,11 @@ public class SysLoginController {
 	}
 
 	/**
-	 * 获取路由信息
-	 *
-	 * @return 路由信息
+	 * @Description: 获取路由信息
+	 * @Author: hlh
+	 * @Date: 2022-05-24 21:53
+	 * @Param: []
+	 * @Return: CommonResult
 	 */
 	@GetMapping("getRouters")
 	public CommonResult getRouters() {

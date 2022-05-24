@@ -7,13 +7,60 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="flow-common" />
+        <module name="activiti-api-process-model" />
+        <module name="activiti-core-test-local-runtime" />
+        <module name="activiti-spring-security" />
         <module name="flow-generator" />
-        <module name="flow-framework" />
+        <module name="activiti-expression-language" />
+        <module name="activiti-spring-app-process" />
+        <module name="activiti-spring-conformance-signals" />
+        <module name="activiti-spring-process-extensions" />
+        <module name="activiti-spring-identity" />
+        <module name="activiti-connector-model" />
         <module name="flow-server" />
+        <module name="activiti-spring-boot-starter" />
+        <module name="activiti-api-model-shared" />
+        <module name="activiti-api-process-model-impl" />
+        <module name="activiti-spring" />
+        <module name="activiti-api-task-runtime-impl" />
+        <module name="flow-common" />
+        <module name="activiti-api-runtime-shared-impl" />
+        <module name="activiti-spring-conformance-set4" />
+        <module name="activiti-project-model" />
+        <module name="activiti-spring-conformance-set5" />
+        <module name="activiti-engine" />
+        <module name="activiti-spring-conformance-set2" />
+        <module name="activiti-spring-conformance-set3" />
+        <module name="activiti-spring-conformance-set0" />
+        <module name="activiti-spring-application" />
+        <module name="activiti-spring-conformance-set1" />
+        <module name="activiti-api-process-runtime-impl" />
+        <module name="activiti-api-task-model-impl" />
+        <module name="activiti-image-generator" />
+        <module name="activiti-api-process-runtime" />
+        <module name="activiti-spring-conformance-util" />
+        <module name="activiti-process-validation" />
+        <module name="activiti-spring-connector" />
+        <module name="activiti-common-util" />
+        <module name="activiti-api-runtime-shared" />
+        <module name="activiti-spring-conformance-variables" />
+        <module name="flow-framework" />
+        <module name="activiti-bpmn-layout" />
+        <module name="activiti-spring-project" />
+        <module name="activiti-bpmn-model" />
+        <module name="activiti-api-model-shared-impl" />
+        <module name="activiti-bpmn-converter" />
+        <module name="activiti-api-task-model" />
+        <module name="activiti-spring-resource-loader" />
+        <module name="activiti-json-converter" />
+        <module name="activiti-api-task-runtime" />
+        <module name="activiti-spring-resource-finder" />
+        <module name="activiti-core-test-assertions" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="activiti" target="11" />
+      <module name="activiti-spring-security-policies" target="1.5" />
       <module name="flow-activiti" target="11" />
     </bytecodeTargetLevel>
   </component>

@@ -5,8 +5,11 @@ import cn.hutool.core.lang.UUID;
 import com.google.code.kaptcha.Producer;
 import com.run.flow.common.CommonResult;
 import com.run.flow.constant.Constants;
+import com.run.flow.model.LoginBody;
 import com.run.flow.utils.RedisUtil;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -52,6 +55,9 @@ public class CaptchaController {
 	 * @Return: CommonResult
 	 */
 	@ApiOperation(value = "验证码")
+	@ApiImplicitParams({
+
+	})
 	@GetMapping(value = "/captchaImage")
 	public CommonResult captcha(HttpServletRequest request, HttpServletResponse response) {
 		CommonResult result = CommonResult.success("success");
