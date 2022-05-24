@@ -1,0 +1,118 @@
+system:
+  # 名称
+  name: flow
+  # 版本
+  version: 1.8.0
+  # 版权年份
+  copyrightYear: 2021
+  # 文件路径 示例（ Windows配置D:/alex/uploadPath，Linux配置 /home/alex/uploadPath）
+  profile: D:/alex/uploadPath
+  # 获取ip地址开关
+  addressEnabled: false
+  # 验证码类型 math 数组计算 char 字符验证
+  captchaType: math
+
+
+server:
+  port: 8081
+
+
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  redis:
+    #超时时间
+    timeout: 10000ms
+    #服务器地址
+    host: 192.168.28.135
+    #服务器端口
+    port: 6379
+    #数据库
+    database: 0
+    #密码
+    lettuce:
+      pool:
+        #最大连接数，默认8
+        max-active: 1024
+        #最大连接阻塞等待时间，默认-1
+        max-wait: 10000ms
+        #最大空闲连接
+        max-idle: 200
+        #最小空闲连接
+        min-idle: 5
+    password: 123456
+
+
+#  # rabbitmq 配置
+#  rabbitmq:
+#    # 用户名
+#    username: guest
+#    # 密码
+#    password: guest
+#    # 服务器地址
+#    host: 127.0.0.1
+#    # 端口
+#    port: 5672
+#    # 消息确认回调
+#    publisher-confirm-type: correlated
+#    # 消息失败回调
+#    publisher-returns: true
+
+
+# Mysql 打印
+logging:
+  level:
+    com.run.flow.mapper: debug
+
+#jwt配置
+jwt:
+  # JWT存储的请求头
+  tokenHeader: Authorization
+  # JWT 加解密使用的密钥
+  secret: flow-secret
+  # JWT的超期限时间（60*60*24）
+  expiration: 604800
+  # JWT 负载中拿到开头
+  tokenHead: Bearer
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: abcdefghijklmnopqrstuvwxyz
+  # 令牌有效期（默认30分钟）
+  expireTime: 30
+
+
+captcha:
+  timeout: 5m
+  width: 160
+  height: 60
+
+knife4j:
+  # 是否开启加强模式 true开启  false关闭
+  enable: false
+  setting:
+    # 是否开启调试功能  true开启  false关闭
+    enableDebug: true
+  basic:
+    # 是否开启认证功能  true开启  false关闭
+    enable: false
+    username: test
+    password: 123456
+swagger:
+  title: 管理后台
+  description: 提供管理员管理的所有功能
+  base-package: com.run.flow.controller
+
+# PageHelper分页插件
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+  params: count=countSql
