@@ -247,6 +247,11 @@
                 <artifactId>flow-framework</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-parent</artifactId>
+                <version>7.1.0-SNAPSHOTT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
